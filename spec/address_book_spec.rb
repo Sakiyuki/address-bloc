@@ -1,4 +1,9 @@
-require 'spec_helper'
+require_relative '../models/address_book'
+
+class AddressBook
+  attr_reader :entries
+
+end
 
 RSpec.describe AddressBook do
   describe "attributes" do
@@ -6,6 +11,18 @@ RSpec.describe AddressBook do
       book = AddressBook.new
       expect(book).to respond_to(:entries)
     end
+
+    it "initializes entries as an array" do
+      book = addressBook.new
+      expect(book.entries).to be_an(Array)
+    end
+
+    it "initializes entries as empty" do
+      book = AddressBook.new
+      expect(book.entries.size).to eq(0)
+    end
+  end
+
 
     describe "#add_entry" do
       it "adds only one entry to the address book" do
@@ -25,6 +42,7 @@ RSpec.describe AddressBook do
         expect(new_entry.email).to eq('augusta.king@lovelace.com')
       end
     end
+  end
 
     describe "#remove_entry" do
       it "a single entry is removed" do

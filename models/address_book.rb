@@ -1,3 +1,4 @@
+# #8
 require_relative 'entry'
 
 class AddressBook
@@ -7,9 +8,6 @@ class AddressBook
     @entries = []
   end
 
-  def remove_entry(name, phone_number, email)
-    @entries.delete_if {|x| x.name == name && x.phone_number == phone_number &&  x.email == email }
-  end
 
   def add_entry(name, phone_number, email)
    # #9
