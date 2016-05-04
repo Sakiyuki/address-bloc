@@ -1,4 +1,4 @@
-require_relative 'entry'
+require_relative 'entry.rb'
 
 class AddressBook
   attr_reader :entries

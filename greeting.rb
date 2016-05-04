@@ -1,5 +1,5 @@
-hello = ARGV.shift
+greeting = ARGV.shift
 
 ARGV.each do |name|
-  puts "#{hello} #{name}"
+  puts "#{greeting} #{name}"
 end
