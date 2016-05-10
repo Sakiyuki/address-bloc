@@ -1,0 +1,13 @@
+*looking for Sally
+0,1,2,3,4
+0,1,Joe,3,4
+0,1,Joe,Sally,4
+
+*looking for Bill (50 entries)
+0,1,2,3,4
+0,1,Joe,3,4
+Bill,1,Joe,3,4
+
+*looking for Dan
+1,Bob,Joe,4,5
+nil
