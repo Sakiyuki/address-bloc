@@ -35,6 +35,15 @@ class AddressBook
     end
   end
 
+  def iterative_search(name)
+    @entries.each do |entry|
+      if entry.name == name
+        return entry
+      end
+    end
+
+    return nil
+
   def binary_search(name)
     lower = 0
     upper = entries.length - 1
@@ -55,4 +64,5 @@ class AddressBook
 
     return nil
   end
+end
 end
