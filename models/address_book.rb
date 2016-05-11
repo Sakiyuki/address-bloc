@@ -43,6 +43,7 @@ class AddressBook
     end
 
     return nil
+  end
 
   def binary_search(name)
     lower = 0
@@ -64,5 +65,5 @@ class AddressBook
 
     return nil
   end
-end
+
 end
