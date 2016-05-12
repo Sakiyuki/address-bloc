@@ -71,7 +71,7 @@ class MenuController
     end
   end
   # #10
-  def view_all_enries
+  def view_all_entries
     # #14
     address_book.entries.each do |entry|
       system "clear"
@@ -108,7 +108,7 @@ class MenuController
     name = gets.chomp
     # #10
     match = address_book.binary_search(name)
-    system "clear"
+    # system "clear"
     # #11
     if match
       puts match.to_s

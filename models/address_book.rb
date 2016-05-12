@@ -16,7 +16,7 @@ class AddressBook
     index = 0
     entries.each do |entry|
       # #10
-      if name < entry.name
+      if name.downcase < entry.name.downcase
         break
       end
       index += 1
@@ -37,7 +37,7 @@ class AddressBook
 
   def iterative_search(name)
     @entries.each do |entry|
-      if entry.name == name
+      if entry.name.downcase == name
         return entry
       end
     end
@@ -46,15 +46,20 @@ class AddressBook
   end
 
   def binary_search(name)
+    name.downcase!
     lower = 0
     upper = entries.length - 1
 
     while lower <= upper
 
       mid = (lower + upper) / 2
-      mid_name = entries[mid].name
+      mid_name = entries[mid].name.downcase
+
+      # puts "#{name.downcase} #{mid_name.downcase}"
+      # puts "#{name} #{mid_name}"
 
       if name == mid_name
+
         return entries[mid]
       elsif name < mid_name
         upper = mid - 1
