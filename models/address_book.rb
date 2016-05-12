@@ -37,7 +37,7 @@ class AddressBook
 
   def iterative_search(name)
     @entries.each do |entry|
-      if entry.name.downcase == name
+      if entry.name.downcase == name.downcase
         return entry
       end
     end
